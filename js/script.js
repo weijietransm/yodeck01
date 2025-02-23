@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     // SharePoint configuration
     const config = {
         auth: {
-            clientId: 'f12ae5f8-7b65-45e9-8ccb-39a2d121e39f',
-            authority: 'https://login.microsoftonline.com/db992bae-4cb3-4086-8c91-55255b0c39fe',
+            clientId: 'd5d52da2-9c9f-4b98-b981-b886ea516f40',
+            authority: 'https://login.microsoftonline.com/99496e88-1ae0-4a27-b6ac-47a10bb149dd',
             redirectUri: window.location.origin,
         }
     };
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 throw loginError;
             }
 
-            const filePath = '/Documents/EventWelcomerUserList.xlsx:/Table1';
+            const filePath = '/Documents/EventWelcomer.xlsx:/RegisteredName';
             const endpoint = `https://graph.microsoft.com/v1.0/me/drive/root:${filePath}`;
             
             const data = await fetch(endpoint, {
